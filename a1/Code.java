@@ -15,7 +15,6 @@ public class Code extends JFrame implements GLEventListener {
     public Code() {
         setTitle("A1");
         setSize(600, 400);
-        setLocation(200, 200);
         myCanvas = new GLCanvas();
         myCanvas.addGLEventListener(this);
         this.add(myCanvas);
@@ -24,7 +23,7 @@ public class Code extends JFrame implements GLEventListener {
 
     public void init(GLAutoDrawable drawable) {
         GL4 gl = (GL4) GLContext.getCurrentGL();
-        renderingProgram = Utils.createShaderProgram("code/base.vert", "code/base.frag");
+        renderingProgram = Utils.createShaderProgram("base.vert", "base.frag");
         gl.glGenVertexArrays(vao.length, vao, 0);
         gl.glBindVertexArray(vao[0]);
     }
@@ -32,7 +31,13 @@ public class Code extends JFrame implements GLEventListener {
     public void display(GLAutoDrawable drawable) {
         GL4 gl = (GL4) GLContext.getCurrentGL();
         gl.glUseProgram(renderingProgram);
-        gl.glDrawArrays(GL_TRIANGLES, 0, 4);
+        gl.glDrawArrays(GL_TRIANGLES, 0, 3);
+    }
+
+    public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
+    }
+
+    public void dispose(GLAutoDrawable drawable) {
     }
 
     public static void main(String[] args) {
