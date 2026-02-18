@@ -85,7 +85,7 @@ public class Code extends JFrame implements GLEventListener {
         System.out.println("OpenGL renderer: " + gl.glGetString(GL_RENDERER));
         System.out.println("JOGL version:    " + GL4.class.getPackage().getImplementationVersion());
         System.out.println("Java version:    " + System.getProperty("java.version"));
-        renderingProgram = Utils.createShaderProgram("base.vert", "base.frag");
+        renderingProgram = Utils.createShaderProgram("a1/base.vert", "a1/base.frag");
         gl.glGenVertexArrays(vao.length, vao, 0);
         gl.glBindVertexArray(vao[0]);
     }
