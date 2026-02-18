@@ -1,1 +1,6 @@
-javac a1/Code.java
+@echo off
+setlocal
+
+cd /d %~dp0
+
+javac -cp "." a1\*.java javagaming\utils\Utils.java
