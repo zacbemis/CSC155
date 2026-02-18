@@ -10,7 +10,7 @@ import com.jogamp.opengl.awt.GLCanvas;
 import com.jogamp.opengl.GLContext;
 import com.jogamp.opengl.util.*;
 
-import javagaming.utils.Utils;
+import utils.Utils;
 
 public class Code extends JFrame implements GLEventListener {
     private GLCanvas myCanvas;

@@ -1,4 +1,4 @@
-package javagaming.utils;
+package utils;
 
 import java.io.*;
 import java.nio.*;
