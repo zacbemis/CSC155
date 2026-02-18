@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-# From a1/, classpath needs parent (..) so a1.Code is found, plus JARs
-CP="..:../javagaming/jogl/jogamp-fat.jar:../javagaming/joml/joml-1.10.7.jar"
+# From a1/, classpath needs parent (..) so a1.Code is found, plus javagaming for utils and JARs
+CP="..:../javagaming:../javagaming/jogl/jogamp-fat.jar:../javagaming/joml/joml-1.10.7.jar"
 
 cd "$(dirname "$0")"
 java -cp "$CP" \

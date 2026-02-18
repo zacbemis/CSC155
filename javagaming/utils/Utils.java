@@ -1,4 +1,4 @@
-package a1;
+package javagaming.utils;
 
 import java.io.*;
 import java.nio.*;
