@@ -11,4 +11,4 @@ java -cp "$CP" \
   --add-exports java.desktop/sun.java2d=ALL-UNNAMED \
   -Dsun.java2d.d3d=false \
   -Dsun.java2d.uiScale=1 \
-  a1.Code
+  a2.Code
