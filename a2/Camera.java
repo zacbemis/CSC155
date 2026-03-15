@@ -59,11 +59,11 @@ public class Camera {
         location.fma(-MOVE_STEP, v);
     }
 
-    public void panRight() {
+    public void panLeft() {
         rotateUAndNAround(v, ROTATE_STEP_RAD);
     }
 
-    public void panLeft() {
+    public void panRight() {
         rotateUAndNAround(v, -ROTATE_STEP_RAD);
     }
 
@@ -92,8 +92,8 @@ public class Camera {
     private void orthonormalize() {
         n.normalize();
         v.normalize();
-        u.set(v).cross(n).normalize();
-        v.set(n).cross(u).normalize();
+        u.set(n).cross(v).normalize();
+        v.set(u).cross(n).normalize();
     }
 
     public Vector3f getLocation() {
